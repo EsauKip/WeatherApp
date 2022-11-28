@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/ic_wbg">
+    android:background="@drawable/ic_wbg"
+    >
 
 
     <ProgressBar
@@ -16,5 +17,61 @@
         android:layout_centerInParent="true">
 
     </ProgressBar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_main_layout"
+        android:visibility="visible">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/cv_toolbar"
+            android:elevation="@dimen/padding_x_large">
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/teal_700"
+
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/padding_large"
+                    app:cardCornerRadius="@dimen/padding_X_small">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_enter_city_name"
+                        android:hint="@string/search_places"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/padding_large"
+                        android:paddingEnd="@dimen/padding_large"
+                        android:textColor="@color/white"
+                        android:drawableTint="@color/black"
+                        >
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_sub_layout"
+            android:layout_below="@+id/cv_toolbar">
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
 
 </RelativeLayout>
